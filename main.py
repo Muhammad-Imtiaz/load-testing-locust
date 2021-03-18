@@ -21,6 +21,7 @@ def polling_rainfocus_api(self):
             return response.failure(f"Unable to communicate to rainfocus")
 
 class IdsApp(HttpUser):
+    wait_time = between(1000, 2000)
     tasks = [polling_rainfocus_api]
 
     
