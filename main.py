@@ -14,7 +14,7 @@ def polling_rainfocus_api(self):
     # headers = {"Authorization": "Bearer " + token}
     # headers.update(HEADERS)
     # print(HEADERS)
-    with self.client.post(f'{BASE_URL}/ids/verifyRainfocus', headers=headers, data={"token": f'{token}'}, catch_response=True) as response:
+    with self.client.post(f'{BASE_URL}/ids/verifyRainfocus', headers=HEADERS, data={"token": f'{token}'}, catch_response=True) as response:
         if response.text != "Success":
             return response.failure(f"Unable to communicate to rainfocus")
 
