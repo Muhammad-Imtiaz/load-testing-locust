@@ -11,12 +11,12 @@ def polling_rainfocus_api(self):
     jwt_token = json.loads(response.content)
     token = jwt_token['jwt']
 
-    headers = {"Authorization": "Bearer " + token}
-    headers.update(HEADERS)
-    print(headers)
-    # with self.client.post(f'{BASE_URL}/ids/verifyRainfocus', headers=HEADERS, data={"token": f'{token}'}, catch_response=True) as response:
-    #     if response.text != "Success":
-    #         return response.failure(f"Unable to communicate to rainfocus")
+    # headers = {"Authorization": "Bearer " + token}
+    # headers.update(HEADERS)
+    # print(headers)
+    with self.client.post(f'{BASE_URL}/ids/verifyRainfocus', headers=HEADERS, data=json.dumps({"token": f'{token}'}), catch_response=True) as response:
+        if response.text != "Success":
+            return response.failure(f"Unable to communicate to rainfocus")
 
 class IdsApp(HttpUser):
     tasks = [polling_rainfocus_api]
