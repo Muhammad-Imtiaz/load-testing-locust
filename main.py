@@ -15,7 +15,9 @@ def polling_rainfocus_api(self):
     # headers.update(HEADERS)
     # print(headers)
     with self.client.post(f'{BASE_URL}/ids/verifyRainfocus', headers=HEADERS, data=json.dumps({"token": f'{token}'}), catch_response=True) as response:
-        if response.text != "Success":
+        response_data = json.loads(response.content)
+        response_code = response_data['user']['responseCode']
+        if response_code != "0":
             return response.failure(f"Unable to communicate to rainfocus")
 
 class IdsApp(HttpUser):
