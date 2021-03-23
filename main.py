@@ -1,7 +1,10 @@
 import json
 import random
 from locust import (HttpUser, task, between, TaskSet)
+import resource
 
+
+resource.setrlimit(resource.RLIMIT_NOFILE, (999999, 999999))
 BASE_URL = 'https://api.fankave.com'
 HEADERS = {'Content-Type': 'application/json', 'clientapikey': 'K5MeJJ3eQmZWt52K'}
 
@@ -38,7 +41,7 @@ def polling_verifytoken_api(self):
     # pick random token from list
     index = get_random_number_in_range()
     token = token_list[index]
-    print(token)
+    # print(token)
     with self.client.post(f'{BASE_URL}/ids/verifyToken', headers=HEADERS, data=json.dumps({"token": f'{token}'}), catch_response=True) as response:
         response_data = json.loads(response.content)
         response_code = response_data['user']['responseCode']
@@ -46,5 +49,5 @@ def polling_verifytoken_api(self):
             return response.failure(f"Unable to verify token")
 
 class IdsApp(HttpUser):
-    # wait_time = between(1000, 2000)
+    wait_time = between(990, 1000)
     tasks = [polling_verifytoken_api]
