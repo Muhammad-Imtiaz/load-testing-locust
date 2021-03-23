@@ -38,6 +38,7 @@ def polling_verifytoken_api(self):
     # pick random token from list
     index = get_random_number_in_range()
     token = token_list[index]
+    print(token)
     with self.client.post(f'{BASE_URL}/ids/verifyToken', headers=HEADERS, data=json.dumps({"token": f'{token}'}), catch_response=True) as response:
         response_data = json.loads(response.content)
         response_code = response_data['user']['responseCode']
