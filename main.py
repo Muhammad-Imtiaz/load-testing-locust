@@ -20,7 +20,7 @@ token_list = ['eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3Z
             'eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3ZjdlNzM5Nzg4ZTRmMWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTXVoYW1tYWQgSW10aWF6IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdnWkE4TEF6TDJHWWF0Mko3NzhLMjZjRjFpZlJ0OU1NMVo1QU9rVz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9vcHRpbXVtLXN1cmZhY2UtNjAyIiwiYXVkIjoib3B0aW11bS1zdXJmYWNlLTYwMiIsImF1dGhfdGltZSI6MTYxNjQ4MDU1NCwidXNlcl9pZCI6IndQN3JpYmRQbmlZRDNITW9yNHl6QUJUeUtsNzIiLCJzdWIiOiJ3UDdyaWJkUG5pWUQzSE1vcjR5ekFCVHlLbDcyIiwiaWF0IjoxNjE2NDgwNTU0LCJleHAiOjE2MTY0ODQxNTQsImVtYWlsIjoiaW10aWF6OTgzMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMzIzNDAyMDE5Nzc5NjgxMjU5MyJdLCJlbWFpbCI6WyJpbXRpYXo5ODMyQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.IH0wuFLgIFSV_kZQmmCTraFMsMJwNunGPLZoOQxjaA2bfQ3QCqPSc4SoTIS8tAthNDvGc3a6TlkRjlZ8qDtRbWOspIUBYFqwT_Oww7win0OnP4V-l8QTLTGrOuWH79Z-yoTicS-fi0M46rZTnFXg-VPLM4xCPJ4qY5lgAdnJsAIC3o0JF5GvC6HhA4H_yUOpkDELWWb5OAeLDEMJINSRbrHMWdoesbutgG0CoHEL5L1h_37l_ktXcEsE_garonJnLgR628GyFxr3refFel_-hjaw9dFMwsNlGjXPCBCq1M8s_Vj2q890hrQkG2pIbCDiRfa273dDbIp8zoTEp2neWQ']
 
 # List to store tokens
-list_size = 500
+list_size = 10
 # token_list = []
 
 def get_random_number_in_range():
@@ -41,9 +41,10 @@ def polling_verifytoken_api(self):
     token = token_list[index]
     # print(token)
     with self.client.post(f'{BASE_URL}/ids/verifyRainfocus', headers=HEADERS, data=json.dumps({"token": f'{token}'}), catch_response=True) as response:
-        response_data = json.loads(response.content)
-        response_code = response_data['user']['responseCode']
-        if response_code != "0":
+        #response_data = json.loads(response.content)
+        #response_code = response_data['user']['responseCode']
+        #print(response)
+        if response.status_code != "0":
             return response.failure(f"Unable to verify Rainfoucs")
 
 class IdsApp(HttpUser):
