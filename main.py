@@ -19,22 +19,20 @@ token_list = ['eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3Z
             'eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3ZjdlNzM5Nzg4ZTRmMWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTXVoYW1tYWQgSW10aWF6IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdnWkE4TEF6TDJHWWF0Mko3NzhLMjZjRjFpZlJ0OU1NMVo1QU9rVz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9vcHRpbXVtLXN1cmZhY2UtNjAyIiwiYXVkIjoib3B0aW11bS1zdXJmYWNlLTYwMiIsImF1dGhfdGltZSI6MTYxNjQ4MDQ4MywidXNlcl9pZCI6IndQN3JpYmRQbmlZRDNITW9yNHl6QUJUeUtsNzIiLCJzdWIiOiJ3UDdyaWJkUG5pWUQzSE1vcjR5ekFCVHlLbDcyIiwiaWF0IjoxNjE2NDgwNDgzLCJleHAiOjE2MTY0ODQwODMsImVtYWlsIjoiaW10aWF6OTgzMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMzIzNDAyMDE5Nzc5NjgxMjU5MyJdLCJlbWFpbCI6WyJpbXRpYXo5ODMyQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.VFWoC9QeEPArB2Z7FfaKgxE-S2OwEZCdk7x7LahjbAaWUG4BUCuQZE4ZBtVl3j6qu-14jsKDMssQQsroicEL0CFNR9b_-h1nEc58dmfjZ561a217c9IAoa4EbQYItZYA4NYUElHS0AOAoK25kgfiMett8476eRrbnJRnU-NobLnY3z4TT9pl4ZLAKkV6jyTKKWhJzFyFRwkn7Ik65a9ueGs4j9CYUYRG3wDht0BelprTpylEG126b3cJzRXpN5ghAQInaShwpYTqeyy2qmxGErvpbgcEsze8r7wbteAYO4Ke4_Suh8ElKW9F0qkSN9OplpmUhuq29rlXXbYgceNGKQ',
             'eyJhbGciOiJSUzI1NiIsImtpZCI6IjRlMDBlOGZlNWYyYzg4Y2YwYzcwNDRmMzA3ZjdlNzM5Nzg4ZTRmMWUiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiTXVoYW1tYWQgSW10aWF6IiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hLS9BT2gxNEdnWkE4TEF6TDJHWWF0Mko3NzhLMjZjRjFpZlJ0OU1NMVo1QU9rVz1zOTYtYyIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9vcHRpbXVtLXN1cmZhY2UtNjAyIiwiYXVkIjoib3B0aW11bS1zdXJmYWNlLTYwMiIsImF1dGhfdGltZSI6MTYxNjQ4MDU1NCwidXNlcl9pZCI6IndQN3JpYmRQbmlZRDNITW9yNHl6QUJUeUtsNzIiLCJzdWIiOiJ3UDdyaWJkUG5pWUQzSE1vcjR5ekFCVHlLbDcyIiwiaWF0IjoxNjE2NDgwNTU0LCJleHAiOjE2MTY0ODQxNTQsImVtYWlsIjoiaW10aWF6OTgzMkBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJnb29nbGUuY29tIjpbIjExMzIzNDAyMDE5Nzc5NjgxMjU5MyJdLCJlbWFpbCI6WyJpbXRpYXo5ODMyQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6Imdvb2dsZS5jb20ifX0.IH0wuFLgIFSV_kZQmmCTraFMsMJwNunGPLZoOQxjaA2bfQ3QCqPSc4SoTIS8tAthNDvGc3a6TlkRjlZ8qDtRbWOspIUBYFqwT_Oww7win0OnP4V-l8QTLTGrOuWH79Z-yoTicS-fi0M46rZTnFXg-VPLM4xCPJ4qY5lgAdnJsAIC3o0JF5GvC6HhA4H_yUOpkDELWWb5OAeLDEMJINSRbrHMWdoesbutgG0CoHEL5L1h_37l_ktXcEsE_garonJnLgR628GyFxr3refFel_-hjaw9dFMwsNlGjXPCBCq1M8s_Vj2q890hrQkG2pIbCDiRfa273dDbIp8zoTEp2neWQ']
 
-
-
 # List to store tokens
-list_size = 10
+list_size = 500
 # token_list = []
 
 def get_random_number_in_range():
     return random.randrange(0, list_size)
 
-def generate_token(self):
-    for i in range(list_size):
-        response = self.client.get(f'https://events.rainfocus.com/api/jwt?clientId=28f702ad-ba8a-4bbe-9df4-ac0292d68ec5&rfApiProfileId=VovKmNb0KMqSUc1tYgRLZIrGijssV7iuclglobal2021')
-        jwt_token = json.loads(response.content)
-        token = jwt_token['jwt']
-        # append token to list
-        token_list.append(token)
+# def generate_token(self):
+#     for i in range(list_size):
+#         response = self.client.get(f'https://events.rainfocus.com/api/jwt?clientId=28f702ad-ba8a-4bbe-9df4-ac0292d68ec5&rfApiProfileId=VovKmNb0KMqSUc1tYgRLZIrGijssV7iuclglobal2021')
+#         jwt_token = json.loads(response.content)
+#         token = jwt_token['jwt']
+#         # append token to list
+#         token_list.append(token)
 
 @task
 def polling_verifytoken_api(self):
@@ -42,12 +40,12 @@ def polling_verifytoken_api(self):
     index = get_random_number_in_range()
     token = token_list[index]
     # print(token)
-    with self.client.post(f'{BASE_URL}/ids/verifyToken', headers=HEADERS, data=json.dumps({"token": f'{token}'}), catch_response=True) as response:
+    with self.client.post(f'{BASE_URL}/ids/verifyRainfocus', headers=HEADERS, data=json.dumps({"token": f'{token}'}), catch_response=True) as response:
         response_data = json.loads(response.content)
         response_code = response_data['user']['responseCode']
         if response_code != "0":
-            return response.failure(f"Unable to verify token")
+            return response.failure(f"Unable to verify Rainfoucs")
 
 class IdsApp(HttpUser):
-    wait_time = between(990, 1000)
+    wait_time = between(1, 2) #seconds
     tasks = [polling_verifytoken_api]
