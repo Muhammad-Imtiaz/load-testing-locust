@@ -3,7 +3,6 @@ import random
 from locust import (HttpUser, task, between, TaskSet)
 import resource
 
-
 resource.setrlimit(resource.RLIMIT_NOFILE, (999999, 999999))
 BASE_URL = 'https://api.fankave.com'
 HEADERS = {'Content-Type': 'application/json', 'clientapikey': 'K5MeJJ3eQmZWt52K'}
@@ -25,14 +24,6 @@ list_size = 10
 
 def get_random_number_in_range():
     return random.randrange(0, list_size)
-
-# def generate_token(self):
-#     for i in range(list_size):
-#         response = self.client.get(f'https://events.rainfocus.com/api/jwt?clientId=28f702ad-ba8a-4bbe-9df4-ac0292d68ec5&rfApiProfileId=VovKmNb0KMqSUc1tYgRLZIrGijssV7iuclglobal2021')
-#         jwt_token = json.loads(response.content)
-#         token = jwt_token['jwt']
-#         # append token to list
-#         token_list.append(token)
 
 @task
 def polling_verifytoken_api(self):
